@@ -186,8 +186,6 @@ A Netcat listener was established on the attacker machine (VM3) on port 4444 (nc
 The payload successfully executed, causing the web application to hang while the underlying OS spawned an interactive bash session. The Netcat listener caught the incoming connection from the target machine. 
 * Executing the `whoami` command confirmed the shell was operating with the privileges of the `www-data` user account.
 
-  <img width="686" height="545" alt="image" src="https://github.com/user-attachments/assets/8e4291fe-3bf5-445e-9c40-98b01c309036" />
-  <img width="687" height="339" alt="image" src="https://github.com/user-attachments/assets/6cac5996-df72-4453-a054-18e9b1a0a2ed" />
 
 
 3.6 Risk Rating Summary
