@@ -58,7 +58,8 @@ The SIEM machine
 •	2.2.1 VM1 Target Machine: Configured as the victim server hosting the vulnerable web application and the log forwarding agent. 
 •	2.2.2 VM2 SIEM Machine: Configured with extended storage to host Splunk Enterprise for log ingestion and defensive investigation. 
 •	2.2.3 VM3 Attacker Machine: Configured as the offensive workstation isolating the exploitation frameworks. 
- 
+ <img width="975" height="286" alt="image" src="https://github.com/user-attachments/assets/64ba3be4-45d4-49e9-b79d-6a4674dd83bb" />
+
 
 2.3 Vulnerable Web Application 2.3.1 Application Overview and Technology Stack: The " Inventory Management" application was developed using a Python/Flask backend and an SQLite3 database, served via an Apache2 web server. Four specific vulnerabilities were engineered into the application. 
 2.3.2 Vulnerability 1: Unrestricted File Upload The file upload mechanism within the administrator portal lacks MIME-type validation and file extension blacklisting. The backend directly saves the user-provided filename to the static uploads directory. 
