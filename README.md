@@ -16,7 +16,7 @@ The scope of this engagement encompasses the complete lifecycle of a cyber intru
    •	To reconstruct the exact attack timeline using forensic logs and perform immediate containment. 
    •	To apply secure coding principles to remediate the vulnerabilities and prove the efficacy of those patches against re-exploitation attempts. 
 
-
+ 
 1.3 Team Structure and Role Distribution To accurately reflect an enterprise security operations center (SOC), the project was divided into four distinct operational roles: 
 
    •	Qusai (Architecture & Visibility): Responsible for the foundational infrastructure, deploying the vulnerable  application, and establishing the log forwarding pipeline to the SIEM. 
