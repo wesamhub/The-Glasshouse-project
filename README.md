@@ -66,11 +66,22 @@ The SIEM machine
 
 
 2.3 Vulnerable Web Application 2.3.1 Application Overview and Technology Stack: The " Inventory Management" application was developed using a Python/Flask backend and an SQLite3 database, served via an Apache2 web server. Four specific vulnerabilities were engineered into the application. 
+
 2.3.2 Vulnerability 1: Unrestricted File Upload The file upload mechanism within the administrator portal lacks MIME-type validation and file extension blacklisting. The backend directly saves the user-provided filename to the static uploads directory. 
+
+<img width="975" height="411" alt="image" src="https://github.com/user-attachments/assets/88971d51-39e9-4731-9d21-95fce1d98f81" />
+
  
 2.3.3 Vulnerability 2: OS Command Injection The "Network Diagnostics" endpoint utilizes the subprocess.check_output() function with shell=True. It directly concatenates user input into the system ping command without sanitization. 
+
+<img width="975" height="318" alt="image" src="https://github.com/user-attachments/assets/8979f2aa-a674-478d-a49f-1b188e2059d5" />
+
  
 2.3.4 Vulnerability 3: Cross-Site Scripting (XSS) The public supplier contact form is vulnerable to Stored XSS. The backend inserts the raw user_message directly into the database. Furthermore, the frontend template explicitly bypasses HTML escaping by using the | safe Jinja filter. 
+
+<img width="975" height="333" alt="image" src="https://github.com/user-attachments/assets/fb0c784f-22d6-4d80-8f72-714636e0c444" />
+
+
  2.4 Log Forwarding Setup
  2.4.1 Agent Configuration on VM1: The Splunk Universal Forwarder was installed on VM1. The agent was configured to connect to VM2 via TCP port 9997. 
 2.4.2 Apache Log Ingestion: The forwarder was instructed to monitor /var/log/apache2/access.log. 
