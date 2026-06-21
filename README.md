@@ -40,6 +40,7 @@ The scope of this engagement encompasses the complete lifecycle of a cyber intru
 
 The web app server
 <br/>
+
 <img width="603" height="379" alt="image" src="https://github.com/user-attachments/assets/400223e9-a614-4f6d-baa2-5ad32aacc9fa" />
 
  
