@@ -58,6 +58,7 @@ The SIEM machine
 •	2.2.1 VM1 Target Machine: Configured as the victim server hosting the vulnerable web application and the log forwarding agent. 
 •	2.2.2 VM2 SIEM Machine: Configured with extended storage to host Splunk Enterprise for log ingestion and defensive investigation. 
 •	2.2.3 VM3 Attacker Machine: Configured as the offensive workstation isolating the exploitation frameworks. 
+
  <img width="975" height="286" alt="image" src="https://github.com/user-attachments/assets/64ba3be4-45d4-49e9-b79d-6a4674dd83bb" />
 
 
