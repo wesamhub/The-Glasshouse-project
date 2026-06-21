@@ -40,14 +40,17 @@ The scope of this engagement encompasses the complete lifecycle of a cyber intru
 2.1 Lab Design Overview The laboratory environment consists of an isolated, host-only virtual network. The architecture separates the offensive workstation from the target environment and establishes a secure telemetry pipeline to a centralized Security Information and Event Management (SIEM) server. 
 
 The web app server
+
 <img width="603" height="379" alt="image" src="https://github.com/user-attachments/assets/400223e9-a614-4f6d-baa2-5ad32aacc9fa" />
 
  
 The attack machine 
+
  <img width="735" height="409" alt="image" src="https://github.com/user-attachments/assets/ebd296bc-8347-455a-8d4b-96d09062eb4c" />
 
 
 The SIEM machine 
+
  <img width="800" height="482" alt="image" src="https://github.com/user-attachments/assets/35a9d94b-dbb6-4f8f-95f1-e9d53e599d7c" />
 
 
