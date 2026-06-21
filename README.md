@@ -19,19 +19,15 @@ The scope of this engagement encompasses the complete lifecycle of a cyber intru
    
    •	To apply secure coding principles to remediate the vulnerabilities and prove the efficacy of those patches against re-exploitation attempts. 
 
- 
-1.3 Team Structure and Role Distribution To accurately reflect an enterprise security operations center (SOC), the project was divided into four distinct operational roles: 
-
-   •	Qusai (Architecture & Visibility): Responsible for the foundational infrastructure, deploying the vulnerable  application, and establishing the log forwarding pipeline to the SIEM. 
-   •	Wesam (Offensive Operations - Red Team): Tasked with adversary emulation, vulnerability exploitation, and achieving persistent remote access on the target machine. 
-   •	Qusai (Defensive Operations & IR - Blue Team): Responsible for threat hunting, timeline reconstruction, containment, and writing specific detection queries within the SIEM. 
-   •	Wesam (Mitigation & Re-Exploitation): Tasked with application security , applying source-code patches via version control, and validating the fixes. 
    
-1.4 Lab Environment Summary
+1.3 Lab Environment Summary
 
    The operational environment utilized a segmented, three-node virtual infrastructure. :
+   
    VM1 served as the Target Machine, hosting the vulnerable Flask/Apache stack and the log forwarding agent. Kali
+   
    VM2 functioned as the SIEM Machine, ingesting telemetry and executing detection logic. Kali  
+   
    VM3 acted as the Attacker Machine, isolating the offensive tooling and exploitation frameworks used during the Red Team engagement. Kali
 
 
