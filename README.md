@@ -1,41 +1,55 @@
 1.0 Introduction
+
 1.1 Project Background and Motivation:
- Modern cybersecurity operations demand a holistic understanding of both offensive exploitation and defensive incident response. "The Glasshouse" project simulates a real-world, full-spectrum cyber attack and defense lifecycle within a highly controlled laboratory environment.
+
+ Modern cybersecurity operations demand a holistic understanding of both offensive exploitation and defensive incident response "The Glasshouse" project simulates a real-world, full-spectrum cyber attack and defense lifecycle within a highly controlled laboratory environment.
+ 
  The primary motivation behind this simulation is to demonstrate the critical importance of system observability. 
 By integrating a vulnerable web application with robust telemetry and a centralized Security Information and Event Management  solution, this project illustrates how rapid detection, containment, and code-level remediation are reliant on comprehensive architectural visibility. 
-1.2 Objectives and Scope
- The scope of this engagement encompasses the complete lifecycle of a cyber intrusion, from initial reconnaissance to final code-level patching. The primary objectives are: 
-•	To engineer and deploy a functional, intentionally vulnerable target application (" Inventory Management") with full SIEM logging capabilities. 
-•	To execute a Black Box penetration test, culminating in Remote Code Execution . 
-•	To reconstruct the exact attack timeline using forensic logs and perform immediate containment. 
-•	To apply secure coding principles to remediate the vulnerabilities and prove the efficacy of those patches against re-exploitation attempts. 
 
+1.2 Objectives and Scope
+
+The scope of this engagement encompasses the complete lifecycle of a cyber intrusion, from initial reconnaissance to final code-level patching. The primary objectives are: 
+ 
+   •	To engineer and deploy a functional, intentionally vulnerable target application (" Inventory Management") with full SIEM logging capabilities. 
+   •	To execute a Black Box penetration test, culminating in Remote Code Execution . 
+   •	To reconstruct the exact attack timeline using forensic logs and perform immediate containment. 
+   •	To apply secure coding principles to remediate the vulnerabilities and prove the efficacy of those patches against re-exploitation attempts. 
 
 
 1.3 Team Structure and Role Distribution To accurately reflect an enterprise security operations center (SOC), the project was divided into four distinct operational roles: 
-•	Qusai (Architecture & Visibility): Responsible for the foundational infrastructure, deploying the vulnerable  application, and establishing the log forwarding pipeline to the SIEM. 
-•	Wesam (Offensive Operations - Red Team): Tasked with adversary emulation, vulnerability exploitation, and achieving persistent remote access on the target machine. 
-•	Qusai (Defensive Operations & IR - Blue Team): Responsible for threat hunting, timeline reconstruction, containment, and writing specific detection queries within the SIEM. 
-•	Wesam (Mitigation & Re-Exploitation): Tasked with application security , applying source-code patches via version control, and validating the fixes. 
+
+   •	Qusai (Architecture & Visibility): Responsible for the foundational infrastructure, deploying the vulnerable  application, and establishing the log forwarding pipeline to the SIEM. 
+   •	Wesam (Offensive Operations - Red Team): Tasked with adversary emulation, vulnerability exploitation, and achieving persistent remote access on the target machine. 
+   •	Qusai (Defensive Operations & IR - Blue Team): Responsible for threat hunting, timeline reconstruction, containment, and writing specific detection queries within the SIEM. 
+   •	Wesam (Mitigation & Re-Exploitation): Tasked with application security , applying source-code patches via version control, and validating the fixes. 
+   
 1.4 Lab Environment Summary
- The operational environment utilized a segmented, three-node virtual infrastructure. :
-VM1 served as the Target Machine, hosting the vulnerable Flask/Apache stack and the log forwarding agent. Kali
- VM2 functioned as the SIEM Machine, ingesting telemetry and executing detection logic. Kali  
- VM3 acted as the Attacker Machine, isolating the offensive tooling and exploitation frameworks used during the Red Team engagement. Kali
+
+   The operational environment utilized a segmented, three-node virtual infrastructure. :
+   VM1 served as the Target Machine, hosting the vulnerable Flask/Apache stack and the log forwarding agent. Kali
+   VM2 functioned as the SIEM Machine, ingesting telemetry and executing detection logic. Kali  
+   VM3 acted as the Attacker Machine, isolating the offensive tooling and exploitation frameworks used during the Red Team engagement. Kali
 
 
 
 
 
 2.0 Architecture & Infrastructure
+
 2.1 Lab Design Overview The laboratory environment consists of an isolated, host-only virtual network. The architecture separates the offensive workstation from the target environment and establishes a secure telemetry pipeline to a centralized Security Information and Event Management (SIEM) server. 
+
 The web app server
+<img width="603" height="379" alt="image" src="https://github.com/user-attachments/assets/400223e9-a614-4f6d-baa2-5ad32aacc9fa" />
+
  
 The attack machine 
-  
+ <img width="735" height="409" alt="image" src="https://github.com/user-attachments/assets/ebd296bc-8347-455a-8d4b-96d09062eb4c" />
+
 
 The SIEM machine 
- 
+ <img width="800" height="482" alt="image" src="https://github.com/user-attachments/assets/35a9d94b-dbb6-4f8f-95f1-e9d53e599d7c" />
+
 
 2.2 Virtual Machine Specifications Three independent Kali Linux virtual machines were provisioned and configured for specific operational roles: 
 •	2.2.1 VM1 Target Machine: Configured as the victim server hosting the vulnerable web application and the log forwarding agent. 
