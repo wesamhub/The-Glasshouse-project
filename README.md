@@ -12,8 +12,11 @@ By integrating a vulnerable web application with robust telemetry and a centrali
 The scope of this engagement encompasses the complete lifecycle of a cyber intrusion, from initial reconnaissance to final code-level patching. The primary objectives are: 
  
    •	To engineer and deploy a functional, intentionally vulnerable target application (" Inventory Management") with full SIEM logging capabilities. 
+   
    •	To execute a Black Box penetration test, culminating in Remote Code Execution . 
+   
    •	To reconstruct the exact attack timeline using forensic logs and perform immediate containment. 
+   
    •	To apply secure coding principles to remediate the vulnerabilities and prove the efficacy of those patches against re-exploitation attempts. 
 
  
